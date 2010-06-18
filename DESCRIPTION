@@ -1,8 +1,8 @@
 Package: anesrake
 Type: Package
 Title: ANES Raking Implementation
-Version: 0.2
-Date: 2010-04-23
+Version: 0.3
+Date: 2010-06-18
 Author: Josh Pasek
 Maintainer: Josh Pasek <josh@joshpasek.com>
 Description: This package provides a comprehensive system for selecting
@@ -16,6 +16,6 @@ Description: This package provides a comprehensive system for selecting
 Depends: Hmisc
 License: GPL-2
 LazyLoad: yes
-Packaged: 2010-05-07 03:21:20 UTC; jmping
+Packaged: 2010-06-18 20:54:12 UTC; jmping
 Repository: CRAN
-Date/Publication: 2010-05-07 08:56:54
+Date/Publication: 2010-06-19 16:45:50

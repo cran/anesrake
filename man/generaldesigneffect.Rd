@@ -26,7 +26,7 @@ Outputs a single value corresponding to the design effect.
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Josh Pasek, Ph.D. Candidate in Communication at Stanford University (www.joshpasek.com)
 }
 \note{
 %%  ~~further notes~~

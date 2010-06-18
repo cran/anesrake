@@ -9,7 +9,10 @@ Function to perform full ANES variable selection and weighting.
 \code{anesrake} takes a list of variables and target values and determines how they should be weighted to match the procedures outlined in DeBell and Krosnick, 2009.  It then performs raking to develop weights for the variables selected such that they match the targets provided.
 }
 \usage{
-anesrake(inputter, dataframe, caseid, weightvec = NULL, cap = 5, verbose = FALSE, maxit = 1000, type = "pctlim", pctlim = 5, nlim = 5, filter = 1, choosemethod = "total", iterate = TRUE, convcrit = 0.01)
+anesrake(inputter, dataframe, caseid, weightvec = NULL,
+cap = 5, verbose = FALSE, maxit = 1000, type = "pctlim",
+pctlim = 5, nlim = 5, filter = 1, choosemethod = "total",
+iterate = TRUE, convcrit = 0.01)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
