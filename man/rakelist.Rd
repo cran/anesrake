@@ -14,7 +14,8 @@ Function to perform full ANES weighting on selected variables.
 \code{rakelist} takes a list of variables and target values weights a dataset with those variables to match the targets via raking.  It is the primary workhorse command of \code{anesrake}.
 }
 \usage{
-rakelist(inputter, dataframe, caseid, weightvec = NULL, cap = 999999, verbose = FALSE, maxit = 1000, convcrit = 0.01)
+rakelist(inputter, dataframe, caseid, weightvec = NULL, cap = 999999,
+ verbose = FALSE, maxit = 1000, convcrit = 0.01)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
