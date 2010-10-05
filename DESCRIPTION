@@ -1,8 +1,8 @@
 Package: anesrake
 Type: Package
 Title: ANES Raking Implementation and Weighted Statistics
-Version: 0.4
-Date: 2010-07-09
+Version: 0.5
+Date: 2010-10-05
 Author: Josh Pasek
 Maintainer: Josh Pasek <josh@joshpasek.com>
 Description: This package provides a comprehensive system for selecting
@@ -14,10 +14,11 @@ Description: This package provides a comprehensive system for selecting
         bounds and allows greater user specification than other
         available raking algorithms. A variety of functions for
         producing simple weighted statistics are also included, such as
-        weighted Pearson's correlations, Chi-Squareds, and t-tests.
+        weighted histograms, Pearson's correlations, partial
+        correlations, Chi-Squareds, and t-tests.
 Depends: Hmisc
 License: GPL-2
 LazyLoad: yes
-Packaged: 2010-07-10 01:23:03 UTC; jmping
+Packaged: 2010-10-06 06:07:13 UTC; jmping
 Repository: CRAN
-Date/Publication: 2010-07-25 11:06:15
+Date/Publication: 2010-10-07 10:41:54

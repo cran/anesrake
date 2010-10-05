@@ -5,7 +5,7 @@ function(object, ...) {
         "iterations"), object$varsused, summary(object$weightvec))
     names(part1list) <- namer
     part2list <- weightassess(object$targets, object$dataframe, 
-        object$weightvec)
+        object$weightvec, object$prevec)
     out <- c(part1list, part2list)
     out
 }

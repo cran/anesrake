@@ -42,7 +42,10 @@ Josh Pasek, Ph.D. Candidate in Communication at Stanford University (www.joshpas
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\code{\link{stdz}}
+\code{\link{wtd.cor}}
+\code{\link{wtd.partial.cor}}
+\code{\link{wtd.chi.sq}}
 }
 \examples{
 test <- c(1,1,1,1,1,1,2,2,2,3,3,3,4,4)

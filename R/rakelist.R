@@ -6,6 +6,7 @@ function(inputter, dataframe, caseid,
     if (is.null(weightvec)) {
         weightvec <- rep(1, length(caseid))
     }
+    prevec <- weightvec
     if (sum(is.na(weightvec)) > 0) {
         stop("seed weights cannot have missing values, use filter to eliminate missing values or substitute 1 for missing cases")
     }
@@ -88,7 +89,7 @@ function(inputter, dataframe, caseid,
     }
     out <- list(weightvec = weightvec, caseid = caseid, iterations = g, 
         nonconvergence = diferr, converge = converge, varsused = names(inputter), 
-        targets = inputter, dataframe = dataframe)
+        targets = inputter, dataframe = dataframe, prevec=prevec)
     class(out) <- "anesrakelist"
     out
 }

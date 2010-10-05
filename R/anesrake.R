@@ -15,6 +15,7 @@ function(inputter, dataframe, caseid,
     if (length(weightvec) != length(caseid)) {
         stop("weight vector does not contain the same number of cases as data frame")
     }
+    prevec <- weightvec
     discrep1 <- anesrakefinder(inputter, dataframe, weightvec, 
         choosemethod)
     if (type == "nolim") {
@@ -78,6 +79,7 @@ function(inputter, dataframe, caseid,
                 ww <- 1
             }
         }
+        iterations <- iterations + ranweight$iterations        
     }
     if (type == "nmax" & fullvars == 0 & iterate == TRUE) {
         ww <- 0
@@ -125,7 +127,7 @@ function(inputter, dataframe, caseid,
         varsused = names(towers), choosemethod = choosemethod, 
         converge = ranweight$converge, nonconvergence = ranweight$nonconvergence, 
         targets = inputter, dataframe = dataframe, iterations = iterations, 
-        iterate = iterate)
+        iterate = iterate, prevec=prevec)
     class(out) <- c("anesrake", "anesrakelist")
     out
 }

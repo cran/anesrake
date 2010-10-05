@@ -2,6 +2,11 @@ weightassess <-
 function(inputter, dataframe, weightvec, 
     prevec = NULL) {
     require(Hmisc)
+    prx <- "Unweighted"
+    if(!is.null(prevec))
+      prx <- "Old Weights"
+    if(sum(prevec==1)==length(prevec))
+      prx <- "Unweighted"
     out <- list()
     if (is.null(prevec)) {
         prevec <- rep(1, length(weightvec))
@@ -32,7 +37,7 @@ function(inputter, dataframe, weightvec,
         odisc <- target - origpct
         nout <- cbind(target, orign, origpct, newn, newpct, chpct, 
             rdisc, odisc)
-        colnames(nout) <- c("Target", "Unweighted N", "Unweighted %", 
+        colnames(nout) <- c("Target", paste(prx, "N"), paste(prx, "%"), 
             "Wtd N", "Wtd %", "Change in %", "Resid. Disc.", 
             "Orig. Disc.")
         eval(parse(text = paste("out$", i, "<- nout", sep = "")))
