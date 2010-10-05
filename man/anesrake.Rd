@@ -99,7 +99,7 @@ data("anes04")
 
 anes04$caseid <- 1:length(anes04$age)
 
-anes04$agecats <- cut(anes04$age, c(25,35,45,55,65))
+anes04$agecats <- cut(anes04$age, c(0, 25,35,45,55,65,99))
 levels(anes04$agecats) <- c("age1824", "age2534", "age3544",
           "age4554", "age5564", "age6599")
 

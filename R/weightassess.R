@@ -22,7 +22,12 @@ function(inputter, dataframe, weightvec,
         if (is.logical(eval(parse(text = paste("dataframe$", 
             i, sep = ""))))) {
           names(orign) <- c("TRUE", "FALSE")
-          target <- target[match(names(orign), names(target))]
+          if(sum(names(target) %in% names(orign))==2)
+            target <- target[match(names(orign), names(target))]
+          else{
+            names(target) <- c("FALSE", "TRUE")
+            target <- target[match(names(orign), names(target))]
+          }
         }
         origpct <- wtd.table(eval(parse(text = paste("dataframe$", 
             i, sep = ""))), weight = prevec)$sum.of.weights/sum(wtd.table(eval(parse(text = paste("dataframe$", 
