@@ -12,7 +12,7 @@ Function to perform full ANES variable selection and weighting.
 anesrake(inputter, dataframe, caseid, weightvec = NULL,
 cap = 5, verbose = FALSE, maxit = 1000, type = "pctlim",
 pctlim = 5, nlim = 5, filter = 1, choosemethod = "total",
-iterate = TRUE, convcrit = 0.01)
+iterate = TRUE, convcrit = 0.01, force1=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -60,6 +60,9 @@ If \code{choosemethod="total"}, variable choice is determined by the sum of the 
 }
   \item{convcrit}{
 \code{convcrit} is the criterion for convergence.  The raking algorithm is determined to have converged when the most recent iteration represents less than a \code{convcrit} percentage improvement over the prior iteration.
+}
+  \item{force1}{
+\code{force1} ensures that the categories of each raking variable sum to 1.  To do so, the target in inputter for each variable is divided by the sum of the targets for that category.
 }
 }
 \details{

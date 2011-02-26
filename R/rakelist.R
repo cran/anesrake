@@ -71,11 +71,11 @@ function(inputter, dataframe, caseid,
         }
     }
     if (diferr > 0.001) {
-        print("raking did not completely converge, please check the results to ensure that sufficient convergence was achieved.")
+        print("raking achieved only partial convergence, please check the results to ensure that sufficient convergence was achieved.")
         print(paste("no improvement was apparent after", g, "iterations"))
         print(paste("current total change in the iteration is:", 
             diferr, "average change per weight is:", diferr/sum(weightvec)))
-        warning(paste("Raking algorithm did not completely converge, please check the results to ensure that sufficient convergence was achieved.  Average change in weight per case is", 
+        warning(paste("Raking algorithm achieved only partial convergence, please check the results to ensure that sufficient convergence was achieved.  Average change in weight per case is", 
             diferr/sum(weightvec)))
         warning("Results are stable, but do not perfectly match population marginals")
         diferrx <- diferr

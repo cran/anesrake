@@ -2,7 +2,7 @@ anesrake <-
 function(inputter, dataframe, caseid, 
     weightvec = NULL, cap = 5, verbose = FALSE, maxit = 1000, 
     type = "pctlim", pctlim = 5, nlim = 5, filter = 1, choosemethod = "total", 
-    iterate = TRUE, convcrit = 0.01) {
+    iterate = TRUE, convcrit = 0.01, force1 = FALSE) {
     dataframe <- dataframe[filter == 1, ]
     caseid <- caseid[filter == 1]
     weightvec <- weightvec[filter == 1]
@@ -16,6 +16,16 @@ function(inputter, dataframe, caseid,
         stop("weight vector does not contain the same number of cases as data frame")
     }
     prevec <- weightvec
+    not100 <- NULL
+    not100 <- names(inputter)[sapply(inputter, function(x) sum(x) %in% c(1, 100))]
+    if(!is.null(not100) & force1==FALSE){
+      warning(paste("Targets for", not100, "do not sum to 100%. Did you make a typo entering the targets?"))
+      warning(paste("You can force variables to sum to 1 by setting force1 to 'TRUE'"))
+    }
+    if(force1==TRUE){
+      warning(paste("Targets for", not100, "do not sum to 100%. Adjusting values to total 100%"))
+      inputter <- lapply(inputter, function(x) x/sum(x))
+     }
     discrep1 <- anesrakefinder(inputter, dataframe, weightvec, 
         choosemethod)
     if (type == "nolim") {
