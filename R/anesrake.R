@@ -17,7 +17,7 @@ function(inputter, dataframe, caseid,
     }
     prevec <- weightvec
     not100 <- NULL
-    not100 <- names(inputter)[sapply(inputter, function(x) sum(x) %in% c(1, 100))]
+    not100 <- names(inputter)[!(sapply(inputter, function(x) sum(x) %in% c(1, 100)))]
     if(!is.null(not100) & force1==FALSE){
       warning(paste("Targets for", not100, "do not sum to 100%. Did you make a typo entering the targets?"))
       warning(paste("You can force variables to sum to 1 by setting force1 to 'TRUE'"))

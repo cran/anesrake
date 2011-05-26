@@ -37,7 +37,7 @@ Prints out a list of all levels of all variables named in inputter.  For each va
 %% ~put references to the literature/web site here ~
 }
 \author{
-Josh Pasek, Ph.D. Candidate in Communication at Stanford University (www.joshpasek.com)
+Josh Pasek, Assistant Professor of Communication Studies at the University of Michigan (www.joshpasek.com).
 }
 \note{
 %%  ~~further notes~~

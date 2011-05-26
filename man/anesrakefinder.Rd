@@ -39,7 +39,7 @@ Returns a vector of variable names and discrepancies via the method chosen in \c
 %% ~put references to the literature/web site here ~
 }
 \author{
-Josh Pasek, Ph.D. Candidate in Communication at Stanford University (www.joshpasek.com) 
+Josh Pasek, Assistant Professor of Communication Studies at the University of Michigan (www.joshpasek.com).
 }
 \note{
 %%  ~~further notes~~

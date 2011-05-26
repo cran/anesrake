@@ -35,7 +35,7 @@ Vector of discrepancies at each level.
 %% ~put references to the literature/web site here ~
 }
 \author{
-Josh Pasek, Ph.D. Candidate in Communication at Stanford University (www.joshpasek.com) 
+Josh Pasek, Assistant Professor of Communication Studies at the University of Michigan (www.joshpasek.com).
 }
 \note{
 %%  ~~further notes~~

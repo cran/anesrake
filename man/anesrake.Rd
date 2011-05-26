@@ -86,7 +86,7 @@ A list object of \code{anesrake} has the following elements:
 DeBell, M. and J.A. Krosnick. (2009). Computing Weights for American National Election Study Survey Data, ANES Technical Report Series, No. nes012427. Available from:  ftp://ftp.electionstudies.org/ftp/nes/bibliography/documents/nes012427.pdf
 }
 \author{
-Josh Pasek, Ph.D. Candidate in Communication at Stanford University (www.joshpasek.com) 
+Josh Pasek, Assistant Professor of Communication Studies at the University of Michigan (www.joshpasek.com).
 }
 \note{
 %%  ~~further notes~~
