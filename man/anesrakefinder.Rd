@@ -29,27 +29,10 @@ The  \code{dataframe} command identifies a \code{data.frame} object of the data 
 \code{choosemethod} is the method for choosing most discrepant variables.  Six options are available:  \code{choosemethod=c("total", "max", "average", "totalsquared", "maxsquared", "averagesquared")}.  If  \code{choosemethod="total"}, variable choice is determined by the sum of the differences between actual and target values for each prospective weighting variable.  If  \code{choosemethod="max"}, variable choice is determined by the largest individual difference between actual and target values for each prospective weighting variable.  If  \code{choosemethod="average"}, variable choice is determined by the mean of the differences between actual and target values for each prospective weighting variable.  If  \code{choosemethod="totalsquared"}, variable choice is determined by the sum of the squared differences between actual and target values for each prospective weighting variable.  If  \code{choosemethod="maxsquared"}, variable choice is determined by the largest squared difference between actual and target values for each prospective weighting variable (note that this is identical to  \code{choosemethod="max"} if the selection type is \code{nlim}).  If  \code{choosemethod="averagesquared"}, variable choice is determined by the mean of the squared differences between actual and target values for each prospective weighting variable. 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 Returns a vector of variable names and discrepancies via the method chosen in \code{choosemethod}.
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Josh Pasek, Assistant Professor of Communication Studies at the University of Michigan (www.joshpasek.com).
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
-\examples{
 }
 \keyword{ ~variable selection }

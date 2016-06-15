@@ -15,6 +15,9 @@ function(weighton, weightto,
     if (sum(weightto) < 1.5) {
         weightto <- weightto * sum(weightvec)
     }
+    if(sum(weightto <= 0)>0){
+        stop("you cannot rake any variable category to 0 or a negative number")
+    }
     if (lwo > (lwt + 1)) {
         stop("number of variable levels does not match number of weighting levels")
     }

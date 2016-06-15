@@ -1,9 +1,6 @@
 discrep.numeric <-
 function(datavec, targetvec, weightvec) {
-    require(Hmisc)
-    dat <- wtd.table(datavec, weightvec)$sum.of.weights/sum(wtd.table(datavec, 
-        weightvec)$sum.of.weights)
+    dat <- wpct(datavec, weightvec)
     out <- targetvec - dat
     out
 }
-

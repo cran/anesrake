@@ -30,9 +30,8 @@ function(inputter, dataframe, caseid,
         if (verbose == TRUE) {
             print(paste("Raking...Iteration", g))
         }
-        for (i in 1:length(inputter)) {
-            weightvec <- rakeonvar(eval(parse(text = paste("mat", 
-                "$", names(inputter[i]), sep = ""))), inputter[[i]], 
+        for (i in names(inputter)) {
+            weightvec <- rakeonvar(mat[,i], inputter[[i]], 
                 weightvec)
         }
         q <- 0
@@ -87,10 +86,10 @@ function(inputter, dataframe, caseid,
         diferrx <- diferr
         converge <- "Complete convergence was achieved"
     }
+    names(weightvec) <- caseid
     out <- list(weightvec = weightvec, caseid = caseid, iterations = g, 
         nonconvergence = diferr, converge = converge, varsused = names(inputter), 
         targets = inputter, dataframe = dataframe, prevec=prevec)
     class(out) <- "anesrakelist"
     out
 }
-

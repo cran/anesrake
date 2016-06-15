@@ -12,7 +12,7 @@ Function to perform full ANES variable selection and weighting.
 anesrake(inputter, dataframe, caseid, weightvec = NULL,
 cap = 5, verbose = FALSE, maxit = 1000, type = "pctlim",
 pctlim = 5, nlim = 5, filter = 1, choosemethod = "total",
-iterate = TRUE, convcrit = 0.01, force1=FALSE)
+iterate = TRUE, convcrit = 0.01, force1=TRUE, center.baseweights=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -64,9 +64,9 @@ If \code{choosemethod="total"}, variable choice is determined by the sum of the 
   \item{force1}{
 \code{force1} ensures that the categories of each raking variable sum to 1.  To do so, the target in inputter for each variable is divided by the sum of the targets for that category.
 }
+  \item{center.baseweights}{
+\code{center.baseweights} forces the initial baseweight to mean to 1 if true (the default setting).
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
 A list object of \code{anesrake} has the following elements:
@@ -87,15 +87,6 @@ DeBell, M. and J.A. Krosnick. (2009). Computing Weights for American National El
 }
 \author{
 Josh Pasek, Assistant Professor of Communication Studies at the University of Michigan (www.joshpasek.com).
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 data("anes04")
@@ -119,7 +110,9 @@ names(targets) <- c("married", "agecats")
 outsave <- anesrake(targets, anes04, caseid=anes04$caseid,
           verbose=TRUE)
 
-write.csv(print(outsave), "outsave.csv")
+caseweights <- data.frame(cases=outsave$caseid, weights=outsave$weightvec)
+
+summary(caseweights)
 
 summary(outsave)
 }

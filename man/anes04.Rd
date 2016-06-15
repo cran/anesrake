@@ -12,9 +12,6 @@ A dataset containing demographic data from the 2004 American National Election S
   The format is:
  chr "anes04"
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 http://www.electionstudies.org
 }

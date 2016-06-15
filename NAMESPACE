@@ -1,10 +1,25 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
+export(anesrake)
+export(anesrakefinder)
+export(rakelist)
+export(discrep)
+export(generaldesigneffect)
+export(rakeonvar)
+export(selecthighestpcts)
+export(selectnhighest)
+export(weightassess)
 
-# Export all names
-exportPattern(".")
+importFrom(Hmisc, wtd.table)
+importFrom(weights, wpct)
 
-# Import all packages listed as Imports or Depends
-import(
-  Hmisc
-)
+S3method(discrep, default)
+S3method(discrep, factor)
+S3method(discrep, logical)
+S3method(discrep, numeric)
+S3method(rakeonvar, default)
+S3method(rakeonvar, factor)
+S3method(rakeonvar, logical)
+S3method(rakeonvar, numeric)
+S3method(summary, anesrake)
+S3method(summary, anesrakelist)
+S3method(print, anesrake)
+S3method(print, anesrakelist)

@@ -46,9 +46,6 @@ Users can set a maximum number of iterations for the function should it fail to 
 \code{convcrit} is the criterion for convergence.  The raking algorithm is determined to have converged when the most recent iteration represents less than a \code{convcrit} percentage improvement over the prior iteration.
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 A list object of \code{rakelist} has the following elements:
 \item{weightvec}{Vector of weights From raking algorithm}
@@ -60,22 +57,8 @@ A list object of \code{rakelist} has the following elements:
 \item{targets}{\code{inputter} from above, a list of the targets used for weighting}
 \item{dataframe}{Copy of the original \code{dataframe} used for weighting (\code{filter} variable applied if specified)}
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Josh Pasek, Assistant Professor of Communication Studies at the University of Michigan (www.joshpasek.com).
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
-\examples{
 }
 \keyword{ ~raking }
 \keyword{ ~weights }

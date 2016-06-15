@@ -27,30 +27,9 @@ The \code{dataframe} command identifies a \code{data.frame} object of the data t
 \code{prevec} is an optional input if some kind of base weights, stratification correction, or other sampling probability of note that should be accounted for before weighting is conducted.  If defined, \code{prevec} must be of a length equivalent to the number of cases in the \code{dataframe}.  If undefined, \code{prevec} will be automatically seeded with a vector of 1s.
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 Prints out a list of all levels of all variables named in inputter.  For each variable, shows values weighted with prevec, weightvec, and the targets and assesses discrepancies for each.
-}
-\references{
-%% ~put references to the literature/web site here ~
 }
 \author{
 Josh Pasek, Assistant Professor of Communication Studies at the University of Michigan (www.joshpasek.com).
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
-\examples{
-}
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

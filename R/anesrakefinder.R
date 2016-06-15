@@ -1,15 +1,13 @@
 anesrakefinder <-
 function(inputter, dataframe, weightvec = NULL, 
     choosemethod = "total") {
-    require(Hmisc)
     if (is.null(weightvec)) {
-        weightvec <- rep(1, length(eval(parse(text = paste("dataframe$", 
-            names(inputter)[1], sep = "")))))
+        weightvec <- rep(1, dim(dataframe)[1])
     }
     findoff <- lapply(names(inputter), function(x) {
-        discrep(eval(parse(text = paste("dataframe$", x, sep = ""))), 
-            eval(parse(text = paste("inputter$", x, sep = ""))), 
-            weightvec)
+        discrep(dataframe[,x], 
+                unlist(inputter[x]), 
+                weightvec)
     })
     names(findoff) <- names(inputter)
     if (choosemethod == "total") {
@@ -44,4 +42,3 @@ function(inputter, dataframe, weightvec = NULL,
     }
     out
 }
-
