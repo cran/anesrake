@@ -13,6 +13,7 @@ weightassess <-
         for (i in names(inputter)) {
             target <- inputter[[i]]
             orign <- wtd.table(dataframe[,i], weights = prevec)$sum.of.weights
+            names(orign) <- wtd.table(dataframe[,i], weights = prevec)$x
             if(is.factor(dataframe[, i])) {
                 target <- target[match(names(orign), names(target))]
             }
@@ -27,6 +28,7 @@ weightassess <-
             #}
             origpct <- wpct(dataframe[,i], prevec)
             newn <- wtd.table(dataframe[,i], weights = weightvec)$sum.of.weights
+            names(newn) <- wtd.table(dataframe[,i], weights = weightvec)$x
             newpct <- wpct(dataframe[,i], weightvec)
             chpct <- newpct - origpct[match(names(origpct), names(newpct))]
             rdisc <- target - newpct[match(names(newpct), names(target))]

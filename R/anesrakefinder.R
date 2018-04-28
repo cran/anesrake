@@ -6,7 +6,7 @@ function(inputter, dataframe, weightvec = NULL,
     }
     findoff <- lapply(names(inputter), function(x) {
         discrep(dataframe[,x], 
-                unlist(inputter[x]), 
+                inputter[x][[1]], 
                 weightvec)
     })
     names(findoff) <- names(inputter)

@@ -1,7 +1,7 @@
-d24af5f89daa483ecaccbeda49ce8914 *DESCRIPTION
+674ad9cb93e2d4716019206efbda2e22 *DESCRIPTION
 24d457af49e1195e60ebf0e6707a2d97 *NAMESPACE
 468134eb92b5813c168cdb9b7f2dbd6b *R/anesrake.R
-c5c7dfdee5fae38ceae85ca90f2ef329 *R/anesrakefinder.R
+3322ab272d8a337c145966f6b612aedd *R/anesrakefinder.R
 b64812cce6abfd74115ef1109dbd3793 *R/discrep.R
 44aba070e9cc22f2b7320415a9e8266e *R/discrep.default.R
 83a03837102afa7e23bc17a68970ffe7 *R/discrep.factor.R
@@ -20,7 +20,7 @@ de3a42ab371f98da0713cb8c3b964e15 *R/selecthighestpcts.R
 8fb9bc8444dc9b078231f8aa56d5a9f7 *R/selectnhighest.R
 04475859df1e720ac8df6a916b949aa8 *R/summary.anesrake.R
 8cbb619aec191dcd3835a74bad4ee93c *R/summary.anesrakelist.R
-c29c7866a873426217b5b6af696db5bc *R/weightassess.R
+35cd717640d874549ae186db0d47c5cc *R/weightassess.R
 4c707ad2ee179019d10b6c206bef45f2 *data/anes04.rda
 894dc32452cfacd0f9d6c99a7e651992 *man/anes04.Rd
 86ee54d574eec50a57a2cea35c687a0f *man/anesrake.Rd
